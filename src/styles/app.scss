@@ -1,0 +1,85 @@
+@import "./_variables";
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: $darkBlue;
+    overflow: hidden;
+    font-family: $fontFamily;
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    .container {
+        background-image: $gradient;
+        width: 20rem;
+        height: auto;
+        border-radius: $borderRadis;
+        padding: 0 1.5rem;
+
+        .starContainer {
+            padding-top: 1.5rem;
+
+            img.starImg {
+                padding: 0.8rem;
+                background-image: $gradient;
+                border-radius: $borderRadis;
+            }
+        }
+
+        .contentsWrapper {
+            h1 {
+                @include primaryFontDesktop;
+            }
+
+            p {
+                @include paragraphFontDesktop;
+            }
+        }
+
+        .ratingContainer {
+            display: flex;
+            flex-direction: column;
+
+            .items {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+                list-style: none;
+                color: $white;
+
+                li {
+                    padding: 1rem;
+                    background-image: $gradient;
+                    border-radius: $borderRadis;
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+            }
+
+            button {
+                margin: 1rem 0 2rem 0;
+                background-color: $orange;
+                border: none;
+                padding: 0.75rem 0;
+                border-radius: $borderRadis;
+                color: $white;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                cursor: pointer;
+            }
+        }
+    }
+}

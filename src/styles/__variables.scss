@@ -1,0 +1,45 @@
+// colors
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$darkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+$black: hsl(0, 0%, 0%);
+$gradient: linear-gradient($darkBlue, $veryDarkBlue);
+
+// fonts
+$desktopPrimary: 2rem;
+$desktopSecondary: 1.5rem;
+$desktopParagraph: 0.9rem;
+$desktopParagraphLineHeight: 1.35rem;
+
+$tabletPrimary: 2rem;
+$tabletSecondary: 1.5rem;
+$tabletParagraph: 1rem;
+
+$mobilePrimary: 2rem;
+$mobileSecondary: 1.5rem;
+$mobileParagraph: 1rem;
+
+// font family
+$fontFamily: "Overpass", sans-serif;
+$fontFamilyLight: 400;
+$fontFamilyHeavy: 700;
+
+// border-radius
+$borderRadis: 2rem;
+
+// Primary Desktop
+@mixin primaryFontDesktop {
+    color: $white;
+    font-size: $desktopPrimary;
+    font-weight: $fontFamilyHeavy;
+}
+
+@mixin paragraphFontDesktop {
+    color: $lightGrey;
+    font-size: $desktopParagraph;
+    font-weight: $fontFamilyLight;
+    line-height: $desktopParagraphLineHeight;
+}
