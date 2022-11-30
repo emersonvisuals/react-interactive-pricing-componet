@@ -67,18 +67,37 @@ html {
                     justify-content: center;
                     cursor: pointer;
                 }
+
+                li.active {
+                    padding: 1rem;
+                    background-image: none;
+                    background-color: $orange;
+                    border-radius: $borderRadis;
+                    width: 1rem;
+                    height: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    color: $white;
+                    transition: $transition;
+                }
+
+                li:hover {
+                    background-image: none;
+                    background-color: $mediumGrey;
+                    transition: $transition;
+                }
             }
 
             button {
-                margin: 1rem 0 2rem 0;
-                background-color: $orange;
-                border: none;
-                padding: 0.75rem 0;
-                border-radius: $borderRadis;
+                @include button;
+            }
+
+            button:hover {
+                background-color: $lightGrey;
                 color: $white;
-                text-transform: uppercase;
-                letter-spacing: 0.2rem;
-                cursor: pointer;
+                transition: $transition;
             }
         }
     }
