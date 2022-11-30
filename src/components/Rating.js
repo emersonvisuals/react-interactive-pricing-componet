@@ -1,69 +1,29 @@
 import React from "react";
+import { useRef } from "react";
 
 const Rating = () => {
-    // items
-    let listOne = document.querySelector("li.one");
-    let listTwo = document.querySelector("li.two");
-    let listThree = document.querySelector("li.three");
-    let listFour = document.querySelector("li.four");
-    let listFive = document.querySelector("li.five");
+    const isActive = useRef(true);
 
-    const itemOne = () => {
-        listOne.classList.toggle("active");
-        listTwo.classList.remove("active");
-        listThree.classList.remove("active");
-        listFour.classList.remove("active");
-        listFive.classList.remove("active");
-    };
-
-    const itemTwo = () => {
-        listOne.classList.remove("active");
-        listTwo.classList.toggle("active");
-        listThree.classList.remove("active");
-        listFour.classList.remove("active");
-        listFive.classList.remove("active");
-    };
-
-    const itemThree = () => {
-        listOne.classList.remove("active");
-        listTwo.classList.remove("active");
-        listThree.classList.toggle("active");
-        listFour.classList.remove("active");
-        listFive.classList.remove("active");
-    };
-
-    const itemFour = () => {
-        listOne.classList.remove("active");
-        listTwo.classList.remove("active");
-        listThree.classList.remove("active");
-        listFour.classList.toggle("active");
-        listFive.classList.remove("active");
-    };
-
-    const itemFive = () => {
-        listOne.classList.remove("active");
-        listTwo.classList.remove("active");
-        listThree.classList.remove("active");
-        listFour.classList.remove("active");
-        listFive.classList.toggle("active");
+    const activeMode = () => {
+        console.log((isActive.current.className = "active"));
     };
 
     return (
         <div className="ratingContainer">
             <div className="items">
-                <li className="one" onClick={itemOne}>
+                <li id="one" className="" ref={isActive} onClick={activeMode}>
                     1
                 </li>
-                <li className="two" onClick={itemTwo}>
+                <li id="two" className="">
                     2
                 </li>
-                <li className="three" onClick={itemThree}>
+                <li id="three" className="">
                     3
                 </li>
-                <li className="four" onClick={itemFour}>
+                <li id="four" className="">
                     4
                 </li>
-                <li className="five" onClick={itemFive}>
+                <li id="five" className="">
                     5
                 </li>
             </div>
