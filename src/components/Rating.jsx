@@ -5,9 +5,13 @@ const Rating = () => {
         oneStar: false,
         twoStars: false,
         threeStars: false,
-        fourStars: false,
+        fourStars: true,
         fiveStars: false,
     });
+
+    // const handleThankYou = () => {
+    //     setThankYouPage(false);
+    // };
 
     return (
         <div className="ratingContainer">
