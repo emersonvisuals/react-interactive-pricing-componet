@@ -8,18 +8,24 @@ import { useState } from "react";
 function App() {
     const [showThankYouPage, setThankYouPage] = useState(true);
 
+    const handleThankYou = (result) => {
+        setThankYouPage(result);
+    };
+
     return (
         <div className="App">
             <div className="container">
-                {showThankYouPage ? (
-                    <div>
-                        <Navbar />
-                        <Contents />
-                        <Rating />
-                    </div>
-                ) : (
-                    <Thankyou />
-                )}
+                <div>
+                    {showThankYouPage ? (
+                        <div>
+                            <Navbar />
+                            <Contents />
+                            <Rating handleThankYou={handleThankYou} />
+                        </div>
+                    ) : (
+                        <Thankyou />
+                    )}
+                </div>
             </div>
         </div>
     );

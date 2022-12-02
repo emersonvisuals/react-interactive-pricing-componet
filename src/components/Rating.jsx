@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Rating = () => {
+const Rating = ({ handleThankYou }) => {
     const [activeRating, setActiveRating] = useState({
         oneStar: false,
         twoStars: false,
@@ -8,10 +8,6 @@ const Rating = () => {
         fourStars: true,
         fiveStars: false,
     });
-
-    // const handleThankYou = () => {
-    //     setThankYouPage(false);
-    // };
 
     return (
         <div className="ratingContainer">
@@ -92,7 +88,11 @@ const Rating = () => {
                     5
                 </li>
             </div>
-            <button>submit</button>
+            <button
+                onClick={() => handleThankYou(false) && console.log("clicked")}
+            >
+                submit
+            </button>
         </div>
     );
 };

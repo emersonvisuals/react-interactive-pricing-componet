@@ -59,3 +59,13 @@ $transition: 0.5s all;
     font-weight: $fontFamilyLight;
     line-height: $desktopParagraphLineHeight;
 }
+
+// selection
+@mixin selectedOption {
+    color: $orange;
+    background-color: $darkBlue;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    margin: 0;
+    border-radius: $borderRadis;
+    font-size: $desktopParagraph;
+}
