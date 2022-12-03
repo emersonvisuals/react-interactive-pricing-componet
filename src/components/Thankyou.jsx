@@ -1,6 +1,7 @@
+import { useState } from "react";
 import ThankyouImg from "../images/illustration-thank-you.svg";
 
-const Thankyou = () => {
+const Thankyou = ({ rating }) => {
     return (
         <div className="thankYouContainer">
             <div className="imageContainerNew">
@@ -11,7 +12,7 @@ const Thankyou = () => {
                 />
             </div>
             <div className="selectionContainer">
-                <p>You selected 4 out of 5</p>
+                <p>You selected {rating} out of 5</p>
             </div>
             <div className="thankYouContainer">
                 <h1>Thank you!</h1>

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
-const Rating = ({ handleThankYou }) => {
+const Rating = ({ handleThankYou, setRating }) => {
     const [activeRating, setActiveRating] = useState({
         oneStar: false,
         twoStars: false,
@@ -23,6 +23,8 @@ const Rating = ({ handleThankYou }) => {
                             fourStars: false,
                             fiveStars: false,
                         });
+                        setRating(1);
+                        console.log("1");
                     }}
                 >
                     1
@@ -38,6 +40,9 @@ const Rating = ({ handleThankYou }) => {
                             fourStars: false,
                             fiveStars: false,
                         });
+
+                        setRating(2);
+                        console.log("2");
                     }}
                 >
                     2
@@ -53,6 +58,9 @@ const Rating = ({ handleThankYou }) => {
                             fourStars: false,
                             fiveStars: false,
                         });
+
+                        setRating(3);
+                        console.log("3");
                     }}
                 >
                     3
@@ -68,6 +76,9 @@ const Rating = ({ handleThankYou }) => {
                             fourStars: true,
                             fiveStars: false,
                         });
+
+                        setRating(4);
+                        console.log("4");
                     }}
                 >
                     4
@@ -83,6 +94,9 @@ const Rating = ({ handleThankYou }) => {
                             fourStars: false,
                             fiveStars: true,
                         });
+
+                        setRating(5);
+                        console.log("5");
                     }}
                 >
                     5

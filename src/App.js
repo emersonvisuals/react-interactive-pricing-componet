@@ -6,10 +6,14 @@ import Thankyou from "./components/Thankyou";
 import { useState } from "react";
 
 function App() {
+    // setting state of thankyou page
     const [showThankYouPage, setThankYouPage] = useState(true);
 
+    // setting state of rating
+    const [rating, setRating] = useState(4);
+
     const handleThankYou = (result) => {
-        setThankYouPage(result);
+        setThankYouPage();
     };
 
     return (
@@ -20,10 +24,13 @@ function App() {
                         <div>
                             <Navbar />
                             <Contents />
-                            <Rating handleThankYou={handleThankYou} />
+                            <Rating
+                                handleThankYou={handleThankYou}
+                                setRating={setRating}
+                            />
                         </div>
                     ) : (
-                        <Thankyou />
+                        <Thankyou rating={rating} />
                     )}
                 </div>
             </div>
