@@ -66,6 +66,7 @@ html {
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    color: $lightGrey;
                 }
 
                 li.active {
@@ -87,6 +88,7 @@ html {
                     background-image: none;
                     background-color: $mediumGrey;
                     transition: $transition;
+                    color: $white;
                 }
             }
 
@@ -95,8 +97,8 @@ html {
             }
 
             button:hover {
-                background-color: $lightGrey;
-                color: $white;
+                background-color: $white;
+                color: $orange;
                 transition: $transition;
             }
         }
